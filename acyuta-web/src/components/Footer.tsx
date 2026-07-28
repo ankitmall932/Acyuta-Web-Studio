@@ -38,7 +38,7 @@ function Footer ()
                     <NavLink className={ isActive } to='/contact'>Contact</NavLink>
                 </div>
             </div>
-            <div className='border-t-2 border-gray-200 flex sm:flex-row flex-col justify-between px-6 py-3 '>
+            <div className='border-t-2 border-gray-200 flex sm:flex-row flex-col justify-between sm:px-6 px-2 py-3 '>
                 <p>&copy; All Rights Reserve to Acyuta Web Studio</p>
                 <div className='flex gap-4'>
                     <h1>Made With ❤️ By Ankit & Zenith</h1>
