@@ -5,9 +5,11 @@ import Footer from "../components/Footer";
 function Route ()
 {
     return (
-        <div>
+        <div className='bg-slate-950 text-slate-100'>
             <Navbar />
-            <Outlet />
+            <main className='pt-16 sm:pt-20'>
+                <Outlet />
+            </main>
             <Footer />
         </div>
     );
