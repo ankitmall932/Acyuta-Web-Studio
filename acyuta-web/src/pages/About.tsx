@@ -1,95 +1,28 @@
+import { ArrowForward, CheckCircle, Groups, Lightbulb, Speed } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
+
 function About ()
 {
+    const principles = [
+        { icon: <Lightbulb />, title: 'Clarity before decoration', description: 'We turn complex business ideas into simple, useful digital journeys.' },
+        { icon: <Groups />, title: 'People-first thinking', description: 'Every screen is shaped around the questions, needs, and confidence of your audience.' },
+        { icon: <Speed />, title: 'Performance with polish', description: 'Beautiful interfaces should also load quickly, work everywhere, and stay dependable.' }
+    ];
+
+    const process = [
+        { number: '01', title: 'Discover', description: 'We understand your goals, audience, offer, and the job your website needs to do.' },
+        { number: '02', title: 'Shape', description: 'We create the structure, content direction, and visual system that make the experience feel intentional.' },
+        { number: '03', title: 'Build', description: 'We develop a responsive, accessible website with clean foundations and room to evolve.' },
+        { number: '04', title: 'Improve', description: 'We review the details, test the experience, and refine the result before launch.' }
+    ];
+
     return (
-        <div className='min-h-screen w-full bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100 py-16'>
-            <div className='mx-auto max-w-300 px-4 sm:px-6 lg:px-8'>
-                <div className='grid gap-12 lg:grid-cols-[0.9fr_0.8fr] items-center'>
-                    <div className='space-y-6'>
-                        <p className='text-sm uppercase tracking-[0.35em] text-amber-400/80'>About Acyuta</p>
-                        <h1 className='text-4xl sm:text-5xl font-bold tracking-tight text-white'>Designing modern websites that grow brands and convert visitors.</h1>
-                        <p className='max-w-2xl text-slate-300 leading-relaxed'>Acyuta is a creative web design and development studio focused on building fast, polished digital experiences for startups, small businesses, and brands that want to stand out online.</p>
-                        <div className='grid gap-4 sm:grid-cols-2'>
-                            <div className='rounded-4xl border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/20'>
-                                <p className='text-sm uppercase tracking-[0.22em] text-amber-300 mb-3'>Mission</p>
-                                <p className='text-slate-300 leading-relaxed'>We help businesses tell their story with beautiful design, strong strategy, and reliable web technology.</p>
-                            </div>
-                            <div className='rounded-4xl border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/20'>
-                                <p className='text-sm uppercase tracking-[0.22em] text-amber-300 mb-3'>Approach</p>
-                                <p className='text-slate-300 leading-relaxed'>Every project begins with clear goals, smart planning, and user-first design to create websites that perform and feel premium.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='rounded-4xl border border-white/10 bg-slate-950/90 p-8 shadow-2xl shadow-slate-950/30'>
-                        <div className='space-y-4'>
-                            <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80'>What we do</p>
-                            <div className='grid gap-4'>
-                                <div className='rounded-3xl bg-slate-900/80 p-5 transition hover:-translate-y-1 hover:border hover:border-amber-400/30'>
-                                    <h2 className='text-lg font-semibold text-white'>Web Design</h2>
-                                    <p className='mt-2 text-slate-400 leading-relaxed'>Crafting memorable brand experiences with clean layouts, modern visuals, and polished UI details.</p>
-                                </div>
-                                <div className='rounded-3xl bg-slate-900/80 p-5 transition hover:-translate-y-1 hover:border hover:border-amber-400/30'>
-                                    <h2 className='text-lg font-semibold text-white'>Web Development</h2>
-                                    <p className='mt-2 text-slate-400 leading-relaxed'>Building responsive, fast websites and apps using modern technologies for performance and accessibility.</p>
-                                </div>
-                                <div className='rounded-3xl bg-slate-900/80 p-5 transition hover:-translate-y-1 hover:border hover:border-amber-400/30'>
-                                    <h2 className='text-lg font-semibold text-white'>Support & Growth</h2>
-                                    <p className='mt-2 text-slate-400 leading-relaxed'>Helping clients maintain their presence, improve conversions, and scale with ongoing support.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='mt-16 grid gap-8 lg:grid-cols-2'>
-                    <div className='rounded-4xl border border-white/10 bg-slate-950/90 p-8 shadow-2xl shadow-slate-950/20'>
-                        <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80 mb-4'>Experience</p>
-                        <p className='text-3xl font-bold text-white'>3</p>
-                        <p className='mt-3 text-slate-400'>Years creating websites, digital products, and brand experiences that users love.</p>
-                    </div>
-                    <div className='rounded-4xl border border-white/10 bg-slate-950/90 p-8 shadow-2xl shadow-slate-950/20'>
-                        <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80 mb-4'>Projects</p>
-                        <p className='text-3xl font-bold text-white'>5+</p>
-                        <p className='mt-3 text-slate-400'>Delivered websites, landing pages, and web apps with care, polish, and strong results.</p>
-                    </div>
-                </div>
-
-                <div className='mt-16 rounded-4xl border border-white/10 bg-slate-950/90 p-10 shadow-2xl shadow-slate-950/30'>
-                    <div className='grid gap-8 lg:grid-cols-3'>
-                        <div className='space-y-4'>
-                            <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80'>Our process</p>
-                            <h2 className='text-3xl font-bold text-white'>How we bring ideas to life</h2>
-                            <p className='text-slate-400 leading-relaxed'>A clear workflow keeps every project moving smoothly, from first concept to launch and beyond.</p>
-                        </div>
-                        <div className='lg:col-span-2'>
-                            <div className='space-y-6'>
-                                { [
-                                    { title: 'Discover', description: 'Research your brand, goals, and audience to define the best path forward.' },
-                                    { title: 'Design', description: 'Create engaging visuals and layouts that reflect your brand and convert visitors.' },
-                                    { title: 'Develop', description: 'Build fast, responsive websites that work beautifully on every device.' },
-                                    { title: 'Refine', description: 'Test and polish every detail for usability, performance, and clarity.' },
-                                    { title: 'Launch', description: 'Deploy your website with confidence and ensure a smooth go-live experience.' },
-                                    { title: 'Support', description: 'Provide ongoing help, updates, and improvements after launch.' }
-                                ].map( ( step, index ) => (
-                                    <div key={ index } className='rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-inner shadow-slate-950/10'>
-                                        <p className='text-sm font-semibold uppercase tracking-[0.24em] text-amber-300'>0{ index + 1 } { step.title }</p>
-                                        <p className='mt-3 text-slate-400 leading-relaxed'>{ step.description }</p>
-                                    </div>
-                                ) ) }
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='mt-16 rounded-4xl border border-white/10 bg-linear-to-r from-slate-900 to-slate-950/80 p-10 shadow-2xl shadow-slate-950/40'>
-                    <div className='flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between'>
-                        <div>
-                            <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80'>Ready to work together?</p>
-                            <h2 className='text-3xl font-bold text-white'>Let’s build something your audience remembers.</h2>
-                        </div>
-                        <a href='/contact' className='inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl'>Contact us</a>
-                    </div>
-                </div>
-            </div>
+        <div className='min-h-screen bg-[#080d16] text-slate-100'>
+            <section className='border-b border-white/10'><div className='mx-auto grid max-w-350 gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:px-16'><div><p className='text-sm font-semibold uppercase tracking-[0.32em] text-amber-300'>About Acyuta</p><h1 className='mt-5 max-w-4xl text-5xl font-black leading-[1.02] text-white sm:text-7xl'>We make the web feel more useful.</h1></div><div className='border-l border-amber-400/50 pl-6'><p className='text-lg leading-8 text-slate-300'>Acyuta Digital Agency is a focused creative partner for businesses that want their digital presence to look considered, communicate clearly, and support real growth.</p><div className='mt-7 flex gap-8 text-sm'><span><strong className='block text-3xl text-amber-300'>3+</strong> years building</span><span><strong className='block text-3xl text-amber-300'>5+</strong> projects delivered</span></div></div></div></section>
+            <section className='mx-auto grid max-w-350 gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[0.8fr_1.2fr] lg:px-16'><div className='hover-card relative hidden min-h-80 overflow-hidden rounded-4xl border border-white/10 bg-slate-950 sm:block'><img src='/HomeImage.png' alt='Acyuta digital product work' className='h-full w-full object-cover opacity-80' /><div className='absolute inset-0 bg-linear-to-t from-[#080d16] via-transparent to-transparent' /><p className='absolute bottom-6 left-6 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300'>Thoughtful by design</p></div><div className='self-center'><p className='text-sm font-semibold uppercase tracking-[0.3em] text-slate-500'>Our point of view</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>Good digital work earns attention, then earns trust.</h2><p className='mt-6 leading-8 text-slate-400'>A website is often the first serious conversation a customer has with your business. We treat that moment with care: strong positioning, useful content, confident design, and technology that quietly does its job.</p><p className='mt-5 leading-8 text-slate-400'>Our social media work follows a different rhythm. We plan content themes, create branded posts, manage publishing, and study audience response so your brand stays active and recognizable every week.</p><p className='mt-5 leading-8 text-slate-400'>That social presence brings people back to the digital home we build for you, creating a connected system instead of disconnected marketing pieces.</p></div></section>
+            <section className='bg-slate-950/70'><div className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='max-w-2xl'><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>What guides us</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>Simple principles. Serious craft.</h2></div><div className='mt-12 grid gap-5 lg:grid-cols-3'>{ principles.map( ( principle ) => <div key={ principle.title } className='hover-card border border-white/10 bg-white/3 p-7'><div className='text-amber-300'>{ principle.icon }</div><h3 className='mt-8 text-xl font-semibold text-white'>{ principle.title }</h3><p className='mt-3 leading-7 text-slate-400'>{ principle.description }</p></div> ) }</div></div></section>
+            <section className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='grid gap-10 border-y border-white/10 py-12 lg:grid-cols-[0.7fr_1.3fr]'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>What you get with us</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>A partner who sees the whole picture.</h2></div><div className='grid gap-4 sm:grid-cols-2'><div className='border-l border-amber-300/60 pl-5'><h3 className='text-xl font-semibold text-white'>A clear point of view</h3><p className='mt-3 text-sm leading-7 text-slate-400'>We help you decide what to say, what to show, and what to leave out so your brand feels confident.</p></div><div className='border-l border-amber-300/60 pl-5'><h3 className='text-xl font-semibold text-white'>A connected system</h3><p className='mt-3 text-sm leading-7 text-slate-400'>Your website, social content, and customer journey work together instead of competing for attention.</p></div><div className='border-l border-amber-300/60 pl-5'><h3 className='text-xl font-semibold text-white'>Practical communication</h3><p className='mt-3 text-sm leading-7 text-slate-400'>You get straightforward updates, clear decisions, and a process that respects your time.</p></div><div className='border-l border-amber-300/60 pl-5'><h3 className='text-xl font-semibold text-white'>Room to evolve</h3><p className='mt-3 text-sm leading-7 text-slate-400'>We build foundations that can grow with new offers, audiences, campaigns, and business goals.</p></div></div></div></section>
+            <section className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='grid gap-12 lg:grid-cols-[0.65fr_1.35fr]'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>How we work</p><h2 className='mt-4 text-4xl font-bold text-white'>A clear path from idea to launch.</h2><p className='mt-5 leading-8 text-slate-400'>You always know what happens next, what we are solving, and why it matters.</p></div><div className='grid gap-4 sm:grid-cols-2'>{ process.map( ( step ) => <div key={ step.number } className='hover-card border border-white/10 p-6'><span className='text-4xl font-black text-amber-300/70'>{ step.number }</span><h3 className='mt-6 text-xl font-semibold text-white'>{ step.title }</h3><p className='mt-3 leading-7 text-slate-400'>{ step.description }</p></div> ) }</div></div><div className='mt-20 flex flex-col gap-6 border-t border-white/10 pt-10 sm:flex-row sm:items-center sm:justify-between'><div><CheckCircle className='text-amber-300' /><h2 className='mt-3 text-2xl font-bold text-white'>Ready for a more capable online presence?</h2></div><NavLink to='/contact' className='inline-flex items-center rounded-full bg-amber-400 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-amber-300'>Talk to Acyuta <ArrowForward className='ml-2' fontSize='small' /></NavLink></div></section>
         </div>
     );
 }

@@ -1,130 +1,42 @@
-import { Moving, ArrowForward, WorkspacePremium, Group, AccessTime, SignalCellularAlt, ShieldOutlined, Computer, Speed, PhoneAndroid, Search, VerifiedUser, Timer, Place, StackedLineChart, HourglassBottom, CurrencyRupee, Handshake, RocketLaunch } from '@mui/icons-material';
+import { ArrowForward, CheckCircle, Code, Groups, Insights, Language, RocketLaunch, Search, Security, Web } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
-import { orange } from '@mui/material/colors';
+
 function Home ()
 {
+    const websiteBenefits = [
+        { icon: <Web />, title: 'Conversion-led design', description: 'Clear journeys that help visitors understand your offer and take action.' },
+        { icon: <Code />, title: 'Clean development', description: 'Fast, maintainable builds that are ready to grow with your business.' },
+        { icon: <Search />, title: 'Search-ready structure', description: 'Technical foundations that make your business easier to discover online.' },
+        { icon: <Security />, title: 'Reliable experience', description: 'Responsive, accessible interfaces that work confidently on every screen.' }
+    ];
+
     return (
-        <>
-            <div className="sm:px-10 px-4 sm:pt-20 pt-10 min-h-screen w-full bg-[url('/bg5.png')] bg-cover bg-center text-slate-100">
-                <div className="mx-auto max-w-350 rounded-4xl border border-white/10 bg-slate-950/85 backdrop-blur-xl shadow-2xl overflow-hidden">
-                    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 p-8 sm:p-12 items-center">
-                        <div className="space-y-6">
-                            <span className="inline-flex items-center gap-2 rounded-full bg-orange-400/15 px-4 py-2 text-sm font-semibold text-orange-200 tracking-[0.18em]">
-                                WELCOME TO ACYUTA WEB STUDIO
-                            </span>
-                            <div className="space-y-3">
-                                <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight">We Build Websites</h1>
-                                <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight">That Help Businesses</h1>
-                                <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight text-orange-300">
-                                    Grow <Moving sx={ { fontSize: 50, color: orange[ 500 ] } } />
-                                </h1>
-                            </div>
-                            <p className="max-w-xl text-slate-300/90 leading-relaxed text-sm sm:text-base">
-                                We create modern, responsive, and high-performance websites that help you attract more customers and grow your brand online.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <NavLink
-                                    to='/contact'
-                                    className='inline-flex items-center justify-center rounded-3xl bg-linear-to-r from-orange-500 to-amber-400 px-8 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-orange-500/20 transition duration-300 hover:-translate-y-1 hover:shadow-xl'
-                                >
-                                    Contact Us <ArrowForward className='ml-2' />
-                                </NavLink>
-                                <NavLink
-                                    to='/services'
-                                    className='inline-flex items-center justify-center rounded-3xl border border-white/20 bg-slate-900/90 px-8 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-slate-800 hover:border-orange-400/40'
-                                >
-                                    Services <ArrowForward className='ml-2' />
-                                </NavLink>
-                            </div>
+        <div className='overflow-hidden bg-[#080d16] text-slate-100'>
+            <section className="relative border-b border-white/10 bg-[url('/bg5.png')] bg-cover bg-center">
+                <div className='absolute inset-0 bg-[#080d16]/75' />
+                <div className='relative mx-auto grid min-h-170 max-w-350 items-center gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-16'>
+                    <div className='max-w-3xl'>
+                        <p className='mb-6 text-sm font-semibold uppercase tracking-[0.32em] text-amber-300'>Acyuta Digital Agency / Strategy, design, growth</p>
+                        <h1 className='max-w-3xl text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-7xl'>We turn ambitious ideas into brands people remember.</h1>
+                        <p className='mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg'>Acyuta Digital Agency brings strategy, creative design, websites, and social media together to help businesses look sharper, communicate clearly, and grow with confidence.</p>
+                        <div className='mt-10 flex flex-col gap-4 sm:flex-row'>
+                            <NavLink to='/contact' className='inline-flex items-center justify-center rounded-full bg-amber-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-amber-300'>Start a project <ArrowForward className='ml-2' /></NavLink>
+                            <NavLink to='/services' className='inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 text-sm font-bold text-white transition hover:border-amber-300 hover:text-amber-300'>Explore services</NavLink>
                         </div>
-                        <div className="relative flex justify-center">
-                            <div className="rounded-4xl border border-white/10 bg-slate-900/70 p-4 shadow-2xl shadow-slate-900/40">
-                                <img
-                                    src="/HomeImage.png"
-                                    alt="home Image"
-                                    className="h-full w-full max-w-130 rounded-3xl object-cover shadow-2xl"
-                                />
-                            </div>
-                        </div>
+                        <div className='mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-400'><span className='inline-flex items-center gap-2'><CheckCircle className='text-amber-300' fontSize='small' /> Strategy-first</span><span className='inline-flex items-center gap-2'><CheckCircle className='text-amber-300' fontSize='small' /> Mobile-ready</span><span className='inline-flex items-center gap-2'><CheckCircle className='text-amber-300' fontSize='small' /> Built for growth</span></div>
                     </div>
+                    <div className='relative mx-auto hidden w-full max-w-xl sm:block'><div className='absolute -inset-6 rounded-full bg-amber-400/10 blur-3xl' /><div className='hover-card relative overflow-hidden rounded-4xl border border-white/15 bg-slate-950/80 p-3 shadow-2xl'><img src='/HomeImage.png' alt='Acyuta website design preview' className='aspect-4/3 w-full rounded-3xl object-cover' /></div></div>
                 </div>
-            </div>
-            <div className='bg-slate-950 text-slate-100 sm:px-10 px-4 py-16'>
-                <div className='mx-auto max-w-300 space-y-10'>
-                    <section className='rounded-4xl border border-white/10 bg-slate-900/80 p-8 shadow-xl shadow-slate-950/50'>
-                        <h2 className='text-4xl font-bold text-center text-slate-100 mb-8'>Key Features</h2>
-                        <div className='grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6'>
-                            { [ {
-                                icon: <WorkspacePremium sx={ { fontSize: 44 } } />,
-                                title: 'Professional Online Identity',
-                                description: 'Build a strong and professional image for your business.'
-                            }, {
-                                icon: <Group sx={ { fontSize: 44 } } />,
-                                title: 'More Customer Enquiries',
-                                description: 'Get more calls and messages from interested customers.'
-                            }, {
-                                icon: <AccessTime sx={ { fontSize: 44 } } />,
-                                title: '24/7 Availability',
-                                description: 'Your business information is available anytime, anywhere.'
-                            }, {
-                                icon: <SignalCellularAlt sx={ { fontSize: 44 } } />,
-                                title: 'Business Growth',
-                                description: 'Reach more people and convert visitors into customers.'
-                            }, {
-                                icon: <ShieldOutlined sx={ { fontSize: 44 } } />,
-                                title: 'Trust & Credibility',
-                                description: 'Customers trust businesses that look professional online.'
-                            } ].map( ( item, idx ) => (
-                                <div key={ idx } className='group rounded-3xl border border-white/10 bg-slate-950/50 p-6 transition duration-300 hover:-translate-y-2 hover:bg-linear-to-br hover:from-orange-500/20 hover:via-slate-950/70 hover:to-slate-950 shadow-lg shadow-slate-950/20'>
-                                    <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-orange-500/15 text-orange-300 transition duration-300 group-hover:bg-orange-500/25'>
-                                        { item.icon }
-                                    </div>
-                                    <h3 className='text-xl font-semibold mb-2'>{ item.title }</h3>
-                                    <p className='text-slate-300/90 text-sm leading-relaxed'>{ item.description }</p>
-                                </div>
-                            ) ) }
-                        </div>
-                    </section>
-                    <section className='rounded-4xl border border-white/10 bg-slate-900/80 p-8 shadow-xl shadow-slate-950/50'>
-                        <h2 className='text-4xl font-bold text-center text-slate-100 mb-8'>Why Choose Acyuta Web Studio?</h2>
-                        <div className='grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5'>
-                            { [ {
-                                icon: <Computer sx={ { fontSize: 36 } } />, title: 'Modern Design'
-                            }, {
-                                icon: <Speed sx={ { fontSize: 36 } } />, title: 'Fast Loading'
-                            }, {
-                                icon: <PhoneAndroid sx={ { fontSize: 36 } } />, title: 'Mobile Friendly'
-                            }, {
-                                icon: <Search sx={ { fontSize: 36 } } />, title: 'SEO Ready'
-                            }, {
-                                icon: <VerifiedUser sx={ { fontSize: 36 } } />, title: 'Secure & Reliable'
-                            }, {
-                                icon: <Timer sx={ { fontSize: 36 } } />, title: '24/7 Support'
-                            }, {
-                                icon: <Place sx={ { fontSize: 36 } } />, title: 'Location Ready'
-                            }, {
-                                icon: <StackedLineChart sx={ { fontSize: 36 } } />, title: 'More Visibility'
-                            }, {
-                                icon: <HourglassBottom sx={ { fontSize: 36 } } />, title: 'On-Time Delivery'
-                            }, {
-                                icon: <CurrencyRupee sx={ { fontSize: 36 } } />, title: 'Affordable Pricing'
-                            }, {
-                                icon: <Handshake sx={ { fontSize: 36 } } />, title: 'Long-Term Partnership'
-                            }, {
-                                icon: <RocketLaunch sx={ { fontSize: 36 } } />, title: 'Future Ready'
-                            } ].map( ( item, idx ) => (
-                                <div key={ idx } className='group rounded-3xl border border-white/10 bg-slate-950/60 p-5 text-center transition duration-300 hover:-translate-y-1 hover:border-orange-400/30 hover:bg-slate-900/90'>
-                                    <div className='mb-3 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/80 text-orange-300 transition duration-300 group-hover:bg-orange-500/20'>
-                                        { item.icon }
-                                    </div>
-                                    <h3 className='font-semibold text-sm'>{ item.title }</h3>
-                                </div>
-                            ) ) }
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </>
+            </section>
+            <section className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'>
+                <div className='grid gap-10 lg:grid-cols-[0.7fr_1.3fr]'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>The web division</p><h2 className='mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl'>A sharper digital foundation for your next chapter.</h2></div><div><p className='max-w-3xl text-lg leading-8 text-slate-300'>From a focused business website to a custom web application, we combine thoughtful design with dependable technology so your online presence feels as capable as your business.</p><NavLink to='/about' className='mt-6 inline-flex items-center font-semibold text-amber-300 hover:text-amber-200'>Meet the studio <ArrowForward className='ml-2' fontSize='small' /></NavLink></div></div>
+                <div className='mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4'>{ websiteBenefits.map( ( benefit ) => <div key={ benefit.title } className='hover-card border-l border-amber-400/50 bg-white/3 p-6 transition hover:bg-white/7'><div className='mb-8 text-amber-300'>{ benefit.icon }</div><h3 className='text-xl font-semibold text-white'>{ benefit.title }</h3><p className='mt-3 text-sm leading-7 text-slate-400'>{ benefit.description }</p></div> ) }</div>
+            </section>
+            <section className='border-y border-cyan-300/20 bg-[#071b27]'><div className='mx-auto grid max-w-350 gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:px-16'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300'>The social division</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>Stay visible between launches.</h2><p className='mt-5 max-w-xl leading-8 text-slate-300'>Social media is a separate growth track: consistent content, stronger brand recall, and a clear voice across the channels your customers already use.</p><NavLink to='/services' className='mt-8 inline-flex items-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-300 hover:text-[#071b27]'>View social media services <ArrowForward className='ml-2' fontSize='small' /></NavLink></div><div className='grid gap-4 sm:grid-cols-3'>{ [ { icon: <Groups />, title: 'Audience' }, { icon: <Insights />, title: 'Insights' }, { icon: <RocketLaunch />, title: 'Campaigns' } ].map( ( item ) => <div key={ item.title } className='social-hover-card hover-card border border-cyan-300/20 bg-cyan-300/6 p-6 text-center'><div className='text-cyan-300'>{ item.icon }</div><p className='mt-4 font-semibold text-white'>{ item.title }</p></div> ) }</div></div></section>
+            <section className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='grid gap-10 lg:grid-cols-[0.7fr_1.3fr]'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>How we create momentum</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>A considered process from first thought to real traction.</h2></div><div className='grid gap-4 sm:grid-cols-3'>{ [ { number: '01', title: 'Position', text: 'Find the clearest story your audience should remember.' }, { number: '02', title: 'Build', text: 'Turn that story into a polished, useful digital experience.' }, { number: '03', title: 'Grow', text: 'Keep learning, publishing, and improving after launch.' } ].map( ( step ) => <div key={ step.number } className='border-t-2 border-amber-300/60 pt-5'><span className='text-sm font-bold text-amber-300'>{ step.number }</span><h3 className='mt-5 text-xl font-semibold text-white'>{ step.title }</h3><p className='mt-3 text-sm leading-7 text-slate-400'>{ step.text }</p></div> ) }</div></div><div className='mt-16 grid gap-4 border-y border-white/10 py-8 sm:grid-cols-3'><div><p className='text-3xl font-bold text-white'>Strategy</p><p className='mt-2 text-sm text-slate-500'>Before pixels or posts</p></div><div><p className='text-3xl font-bold text-white'>Consistency</p><p className='mt-2 text-sm text-slate-500'>Across every touchpoint</p></div><div><p className='text-3xl font-bold text-white'>Clarity</p><p className='mt-2 text-sm text-slate-500'>In every next step</p></div></div></section>
+            <section className='mx-auto max-w-350 px-6 py-24 text-center sm:px-10 lg:px-16'><Language className='text-amber-300' fontSize='large' /><h2 className='mx-auto mt-5 max-w-3xl text-4xl font-bold text-white sm:text-5xl'>One studio. Two growth engines. One clear direction.</h2><p className='mx-auto mt-5 max-w-2xl leading-8 text-slate-400'>Build a digital home people trust, then keep the conversation moving with a social presence that feels unmistakably yours.</p></section>
+        </div>
     );
 }
+
 export default Home;

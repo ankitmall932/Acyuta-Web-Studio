@@ -1,136 +1,30 @@
+import { ArrowForward, Campaign, Code, DesignServices, Language, SupportAgent } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
+
 function Services ()
 {
-    const card: { title: string; description: string; image: string; }[] = [
-        {
-            title: "Website Development",
-            description: "We create responsive and visually appealing websites that effectively represent your brand and engage your audience.",
-            image: '/card1.png'
-        },
-        {
-            title: 'E-commerce Development',
-            description: 'We build secure and scalable e-commerce platforms that provide seamless shopping experiences for your customers.',
-            image: '/card2.png'
-        },
-        {
-            title: 'UI/UX Design',
-            description: 'Our team designs intuitive and user-friendly interfaces that enhance user experience and drive conversions.',
-            image: '/card3.png'
-        },
-        {
-            title: 'Website Redesign',
-            description: 'We refresh and modernize existing websites to improve their performance, user experience, and visual appeal.',
-            image: '/card4.png'
-        },
-        {
-            title: 'Website Maintenance & Support',
-            description: 'We offer ongoing maintenance and support services to ensure your website remains secure, up-to-date, and fully functional.',
-            image: '/card5.png'
-        },
-        {
-            title: 'Custom Web Solutions',
-            description: 'We develop custom web applications tailored to your specific business needs, providing unique solutions that drive growth.',
-            image: '/card6.png'
-        }
+    const websiteServices = [
+        { icon: <Language />, title: 'Business websites', description: 'A focused, credible digital home that explains your offer and turns visits into enquiries.' },
+        { icon: <Code />, title: 'Custom web solutions', description: 'Purpose-built applications and tools for workflows that off-the-shelf products cannot solve.' },
+        { icon: <DesignServices />, title: 'UI/UX design', description: 'Clear interfaces, useful content structure, and a visual system your customers can trust.' },
+        { icon: <SupportAgent />, title: 'Redesign and support', description: 'Modernize, maintain, and improve your existing website without losing what already works.' }
     ];
 
-    const processSteps = [
-        {
-            title: 'Understand',
-            description: 'We start by learning your business goals, audience, and technical needs so the project is built for real impact.'
-        },
-        {
-            title: 'Plan & Design',
-            description: 'Our team creates a strategic roadmap and modern visuals that align with your brand and deliver an intuitive experience.'
-        },
-        {
-            title: 'Develop',
-            description: 'We bring the design to life with clean code, fast performance, and responsive layouts across devices.'
-        },
-        {
-            title: 'Review & Refine',
-            description: 'We test, polish, and improve every detail to ensure the final product is reliable, usable, and on-brand.'
-        },
-        {
-            title: 'Launch',
-            description: 'We deploy your website or app with careful setup and smooth delivery so your audience can engage immediately.'
-        },
-        {
-            title: 'Support',
-            description: 'After launch, we stay available for updates, maintenance, and continued growth as your business evolves.'
-        }
+    const socialServices = [
+        { title: 'Content strategy', description: 'A practical calendar shaped around your audience, offers, and business moments.' },
+        { title: 'Creative production', description: 'Branded posts, captions, reels direction, and campaign assets that feel consistent.' },
+        { title: 'Publishing support', description: 'Regular scheduling and profile upkeep across Instagram, Facebook, and WhatsApp.' },
+        { title: 'Insights and growth', description: 'Simple monthly reporting that turns performance into better next steps.' }
     ];
 
     return (
-        <div className="sm:px-10 px-4 sm:py-20 py-12 min-h-screen w-full overflow-x-hidden bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100">
-            <div className='mx-auto max-w-300 text-center'>
-                <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80 mb-4'>Services</p>
-                <h1 className="text-4xl sm:text-5xl font-bold mb-4">Solutions That Empower Your Business</h1>
-                <p className="mx-auto max-w-2xl text-slate-300 leading-relaxed">From business websites to advanced web applications, we deliver digital solutions tailored to your goals with modern design and performance.</p>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-6 my-12">
-                { card.map( ( item, index ) => (
-                    <div
-                        key={ index }
-                        className="group overflow-hidden rounded-4xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-slate-950/20 transition duration-300 hover:-translate-y-2 hover:border-amber-400/30 hover:bg-slate-900"
-                    >
-                        <div className='grid sm:grid-cols-[1.1fr_0.9fr] gap-6 items-center'>
-                            <div className='space-y-4'>
-                                <div className='inline-flex items-center justify-center rounded-3xl bg-linear-to-r from-orange-500 to-amber-400 p-4 text-slate-950 shadow-lg shadow-orange-500/20'>
-                                    <span className='text-lg font-semibold'>0{ index + 1 }</span>
-                                </div>
-                                <h2 className="text-2xl font-semibold">{ item.title }</h2>
-                                <p className="text-slate-300 leading-relaxed">{ item.description }</p>
-                            </div>
-                            <div className='flex justify-center items-center rounded-3xl bg-slate-950/70 p-4'>
-                                <img
-                                    src={ item.image }
-                                    alt={ item.title }
-                                    className="max-w-45 w-full h-auto object-contain rounded-[1.2rem]"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                ) ) }
-            </div>
-            <section className='mx-auto max-w-300 rounded-4xl border border-white/10 bg-slate-900/80 p-6 sm:p-10 shadow-2xl shadow-slate-950/30 mt-10 overflow-hidden'>
-                <div className='text-center mb-8 sm:mb-10'>
-                    <p className='text-sm uppercase tracking-[0.32em] text-amber-400/80 mb-3'>Development Process</p>
-                    <h2 className='text-3xl sm:text-4xl font-bold'>Our 6-Step Project Workflow</h2>
-                </div>
-                <div className='relative'>
-                    <div className='hidden lg:block absolute left-6 top-12 bottom-12 w-1 bg-amber-400/20' />
-                    <div className='hidden lg:block absolute left-6 top-12 bottom-12 w-1 bg-linear-to-b from-amber-400/40 via-transparent to-amber-400/40 blur-sm' />
-                    <div className='space-y-8 lg:pl-20'>
-                        { processSteps.map( ( step, idx ) => (
-                            <div key={ step.title } className='grid gap-4 overflow-hidden rounded-4xl border border-white/10 bg-slate-950/95 p-6 sm:p-8 shadow-2xl shadow-slate-950/30 transition duration-300 hover:-translate-y-1 hover:border-amber-400/30 lg:grid-cols-[56px_minmax(0,1fr)] lg:items-start'>
-                                <div className='flex h-14 w-14 items-center justify-center rounded-full border-2 border-amber-400 bg-slate-950 text-amber-300 font-bold shadow-xl'>
-                                    { idx + 1 }
-                                </div>
-                                <div>
-                                    <h3 className='text-xl font-semibold mb-3 text-slate-100'>{ step.title }</h3>
-                                    <p className='text-slate-300 text-sm leading-relaxed'>{ step.description }</p>
-                                </div>
-                            </div>
-                        ) ) }
-                    </div>
-                </div>
-            </section>
-            <div className='mx-auto max-w-300 rounded-4xl border border-white/10 bg-slate-900/80 p-10 mt-10 shadow-2xl shadow-slate-950/30'>
-                <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
-                    <div>
-                        <h2 className='text-3xl font-bold mb-3'>Looking for a custom solution?</h2>
-                        <p className='text-slate-300 leading-relaxed max-w-2xl'>Whether you need a dynamic e-commerce site, a modern landing page, or a full web app, our team can build it with speed, security, and style.</p>
-                    </div>
-                    <NavLink
-                        to='/contact'
-                        className='inline-flex items-center justify-center rounded-full bg-linear-to-r from-orange-500 to-amber-400 px-8 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-1 hover:shadow-xl'
-                    >
-                        Get Started
-                    </NavLink>
-                </div>
-            </div>
+        <div className='flex min-h-screen flex-col overflow-hidden bg-[#080d16] text-slate-100'>
+            <section className='border-b border-white/10'><div className='mx-auto max-w-350 px-6 py-24 text-center sm:px-10 lg:px-16'><p className='text-sm font-semibold uppercase tracking-[0.32em] text-amber-300'>Services</p><h1 className='mx-auto mt-5 max-w-4xl text-5xl font-black leading-[1.02] text-white sm:text-7xl'>Two disciplines. One stronger brand.</h1><p className='mx-auto mt-7 max-w-2xl text-lg leading-8 text-slate-400'>Build a digital foundation with our web team, then keep your audience engaged with a dedicated social media system.</p></div></section>
+            <section className='order-1 border-y border-cyan-300/20 bg-[#071b27]'><div className='mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='flex flex-col gap-5 border-b border-cyan-300/30 pb-8 sm:flex-row sm:items-end sm:justify-between'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300'>01 / Social media services</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>Your daily presence, intentionally managed.</h2></div><p className='max-w-md text-sm leading-7 text-slate-400'>A separate content and growth track for brands that want to stay active, relevant, and recognizable between major website updates.</p></div><div className='mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>{ socialServices.map( ( service, index ) => <div key={ service.title } className='social-hover-card hover-card border border-cyan-300/20 bg-cyan-300/5 p-6'><span className='text-3xl font-black text-cyan-300/70'>0{ index + 1 }</span><h3 className='mt-8 text-xl font-semibold text-white'>{ service.title }</h3><p className='mt-3 text-sm leading-7 text-slate-400'>{ service.description }</p></div> ) }</div><div className='social-hover-card hover-card mt-10 flex flex-col gap-5 border border-cyan-300/20 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8'><div><p className='font-semibold text-white'>Platforms we can support</p><p className='mt-2 text-sm text-slate-400'>Instagram / Facebook / WhatsApp / LinkedIn</p></div><Campaign className='text-cyan-300' fontSize='large' /></div></div></section>
+            <section className='order-2 mx-auto max-w-350 px-6 py-24 sm:px-10 lg:px-16'><div className='flex flex-col gap-5 border-b border-amber-400/30 pb-8 sm:flex-row sm:items-end sm:justify-between'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>02 / Website services</p><h2 className='mt-4 text-4xl font-bold text-white sm:text-5xl'>Your digital home, properly built.</h2></div><p className='max-w-md text-sm leading-7 text-slate-400'>The web team focuses on structure, usability, performance, and conversion. This is where your long-term digital foundation takes shape.</p></div><div className='mt-10 grid gap-5 md:grid-cols-2'>{ websiteServices.map( ( service ) => <div key={ service.title } className='hover-card group border border-white/10 bg-white/3 p-7 transition hover:border-amber-300/50'><div className='flex items-center justify-between'><div className='text-amber-300'>{ service.icon }</div><ArrowForward className='text-slate-600 transition group-hover:text-amber-300' /></div><h3 className='mt-12 text-2xl font-semibold text-white'>{ service.title }</h3><p className='mt-3 max-w-md leading-7 text-slate-400'>{ service.description }</p></div> ) }</div><NavLink to='/pricing' className='mt-10 inline-flex items-center rounded-full bg-amber-400 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-amber-300'>View website pricing <ArrowForward className='ml-2' fontSize='small' /></NavLink></section>
+            <section className='order-3 mx-auto max-w-350 px-6 pb-32 sm:px-10 lg:px-16'><div className='flex flex-col gap-5 border-t border-white/10 pt-12 sm:flex-row sm:items-center sm:justify-between'><div><p className='text-sm font-semibold uppercase tracking-[0.3em] text-slate-500'>Not sure where to start?</p><h2 className='mt-3 text-3xl font-bold text-white'>Tell us what you are trying to grow.</h2></div><NavLink to='/pricing' className='inline-flex items-center rounded-full border border-amber-300 px-6 py-3 text-sm font-semibold text-amber-300 transition hover:bg-amber-300 hover:text-slate-950'>View pricing <ArrowForward className='ml-2' fontSize='small' /></NavLink></div></section>
         </div>
     );
 }
+
 export default Services;

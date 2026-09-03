@@ -13,13 +13,13 @@ function Navbar ()
             <header className='fixed inset-x-0 top-0 z-50 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 text-slate-100 shadow-lg'>
                 <div className='mx-auto flex max-w-350 items-center justify-between px-6 py-4 sm:px-10'>
                     <NavLink to='/' className='inline-flex items-center gap-3'>
-                        <img src='/appLogo2.png' alt='Acyuta logo' className='h-12 w-12 rounded-2xl object-cover border border-slate-700 bg-slate-900' />
-                        <div className='text-sm font-semibold tracking-[0.16em] text-slate-100'>ACYUTA</div>
+                        <img src='/Logo.png' alt='Acyuta logo' className='h-12 w-20 rounded-2xl object-cover border border-slate-700 bg-slate-900' />
                     </NavLink>
                     <nav className='hidden sm:flex items-center gap-10'>
                         <NavLink className={ isActive } to='/'>Home</NavLink>
                         <NavLink className={ isActive } to='/about'>About</NavLink>
                         <NavLink className={ isActive } to='/services'>Services</NavLink>
+                        <NavLink className={ isActive } to='/pricing'>Pricing</NavLink>
                         <NavLink className={ isActive } to='/contact'>Contact</NavLink>
                     </nav>
                     <button
@@ -47,6 +47,7 @@ function Navbar ()
                         <NavLink onClick={ () => setIsOpen( false ) } className={ isActive } to='/'>Home</NavLink>
                         <NavLink onClick={ () => setIsOpen( false ) } className={ isActive } to='/about'>About</NavLink>
                         <NavLink onClick={ () => setIsOpen( false ) } className={ isActive } to='/services'>Services</NavLink>
+                        <NavLink onClick={ () => setIsOpen( false ) } className={ isActive } to='/pricing'>Pricing</NavLink>
                         <NavLink onClick={ () => setIsOpen( false ) } className={ isActive } to='/contact'>Contact</NavLink>
                     </div>
                 </div>
