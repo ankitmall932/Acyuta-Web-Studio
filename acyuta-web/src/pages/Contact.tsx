@@ -54,7 +54,7 @@ function Contact ()
                         <div className='grid gap-4 sm:grid-cols-2'>
                             <div className='hover-card rounded-4xl border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/30'>
                                 <p className='text-sm text-amber-300 uppercase tracking-[0.22em] mb-3'>Email</p>
-                                <p className='text-lg text-white font-semibold'>acyutawebstudio@gmail.com</p>
+                                <p className='text-lg text-white font-semibold'>acyutadigitalstudio@gmail.com</p>
                                 <p className='mt-3 text-slate-400 text-sm'>Fast replies, project estimates, and partnership details.</p>
                             </div>
                             <div className='hover-card rounded-4xl border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/30'>

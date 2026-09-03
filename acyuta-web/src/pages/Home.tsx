@@ -16,9 +16,9 @@ function Home ()
                 <div className='absolute inset-0 bg-[#080d16]/75' />
                 <div className='relative mx-auto grid min-h-170 max-w-350 items-center gap-12 px-6 py-24 sm:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-16'>
                     <div className='max-w-3xl'>
-                        <p className='mb-6 text-sm font-semibold uppercase tracking-[0.32em] text-amber-300'>Acyuta Digital Agency / Strategy, design, growth</p>
+                        <p className='mb-6 text-sm font-semibold uppercase tracking-[0.32em] text-amber-300'>Acyuta Digital Studio / Strategy, design, growth</p>
                         <h1 className='max-w-3xl text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-7xl'>We turn ambitious ideas into brands people remember.</h1>
-                        <p className='mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg'>Acyuta Digital Agency brings strategy, creative design, websites, and social media together to help businesses look sharper, communicate clearly, and grow with confidence.</p>
+                        <p className='mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg'>Acyuta Digital Studio brings strategy, creative design, websites, and social media together to help businesses look sharper, communicate clearly, and grow with confidence.</p>
                         <div className='mt-10 flex flex-col gap-4 sm:flex-row'>
                             <NavLink to='/contact' className='inline-flex items-center justify-center rounded-full bg-amber-400 px-7 py-4 text-sm font-bold text-slate-950 transition hover:-translate-y-1 hover:bg-amber-300'>Start a project <ArrowForward className='ml-2' /></NavLink>
                             <NavLink to='/services' className='inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-4 text-sm font-bold text-white transition hover:border-amber-300 hover:text-amber-300'>Explore services</NavLink>

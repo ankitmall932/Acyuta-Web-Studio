@@ -18,7 +18,7 @@ function Footer ()
                     </div>
                     <div className='flex items-center  gap-3'>
                         <h3><Email /></h3>
-                        <h3>acyutawebstudio@gmail.com</h3>
+                        <h3>acyutadigitalstudio@gmail.com</h3>
                     </div>
                     <div className='flex items-center  gap-3'>
                         <h3><Call /></h3>
@@ -26,7 +26,7 @@ function Footer ()
                     </div>
                     <div className='flex gap-5'>
                         <NavLink to='https://wa.me/9336727772'><WhatsApp /></NavLink>
-                        <NavLink to='https://www.instagram.com/ankit_mall_932'><Instagram /></NavLink>
+                        <NavLink to='https://www.instagram.com/acyutadigitalstudio?igsi=MTNhNmhldzR5cDZ6MA=='><Instagram /></NavLink>
                         <NavLink to='https://www.facebook.com/ankitmall.932'><Facebook /></NavLink>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ function Footer ()
                 </div>
             </div>
             <div className='border-t-2 border-gray-200 flex sm:flex-row flex-col justify-between sm:px-6 px-2 py-3 '>
-                <p>&copy; All Rights Reserve to Acyuta Digital Agency</p>
+                <p>&copy; All Rights Reserve to Acyuta Digital Studio</p>
                 <div className='flex gap-4'>
                     <h1>Made With ❤️ By Ankit & Zenith</h1>
                 </div>
