@@ -59,7 +59,7 @@ function Contact ()
                             </div>
                             <div className='hover-card rounded-4xl border border-white/10 bg-slate-950/80 p-6 shadow-2xl shadow-slate-950/30'>
                                 <p className='text-sm text-amber-300 uppercase tracking-[0.22em] mb-3'>Phone</p>
-                                <p className='text-lg text-white font-semibold'>+91 93367 27772</p>
+                                <p className='text-lg text-white font-semibold'>+91 93367 27772 / 9936798441</p>
                                 <p className='mt-3 text-slate-400 text-sm'>Available Monday to Saturday, 10am to 7pm.</p>
                             </div>
                         </div>

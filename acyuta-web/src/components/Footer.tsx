@@ -22,7 +22,7 @@ function Footer ()
                     </div>
                     <div className='flex items-center  gap-3'>
                         <h3><Call /></h3>
-                        <h3>9336727772</h3>
+                        <h3>9336727772 / 9936798441</h3>
                     </div>
                     <div className='flex gap-5'>
                         <NavLink to='https://wa.me/9336727772'><WhatsApp /></NavLink>
