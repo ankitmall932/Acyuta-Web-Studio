@@ -1,7 +1,13 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
 	scroll-behavior: smooth;
+	color-scheme: light;
+}
+
+html.dark {
+	color-scheme: dark;
 }
 
 @keyframes section-reveal {
@@ -38,10 +44,22 @@ html {
 	box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.25), 0 0 2rem rgb(251 191 36 / 0.08);
 }
 
+html:not(.dark) .hover-card:hover {
+	border-color: rgb(217 119 6 / 0.4);
+	background-color: rgb(255 255 255 / 0.9);
+	box-shadow: 0 1.25rem 2.5rem rgb(15 23 42 / 0.1), 0 0 1.5rem rgb(251 191 36 / 0.08);
+}
+
 .social-hover-card:hover {
 	border-color: rgb(103 232 249 / 0.65);
 	background-color: rgb(103 232 249 / 0.1);
 	box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.25), 0 0 2rem rgb(34 211 238 / 0.1);
+}
+
+html:not(.dark) .social-hover-card:hover {
+	border-color: rgb(8 145 178 / 0.35);
+	background-color: rgb(236 254 255 / 0.9);
+	box-shadow: 0 1.25rem 2.5rem rgb(15 23 42 / 0.1), 0 0 1.5rem rgb(34 211 238 / 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -66,7 +84,7 @@ html {
 }
 
 #oopss {
-  background: linear-gradient(-45deg, #fff300, #efe400);
+  background: linear-gradient(-45deg, #f8fafc, #e2e8f0);
   position: fixed;
   left: 0px;
   top: 0;
@@ -81,8 +99,21 @@ html {
   flex-direction: column;
   align-items: center;
   font-family: 'Shabnam', Tahoma, sans-serif;
-  color: #000;
+  color: #0f172a;
   direction: rtl;
+}
+#oopss .back {
+  color: #0f172a;
+}
+html.dark #oopss {
+  background: linear-gradient(-45deg, #1e293b, #080d16);
+}
+html.dark #oopss #error-text {
+  color: #f8fafc;
+}
+html.dark #oopss .back {
+  background: #f8fafc;
+  color: #0f172a;
 }
 #oopss #error-text img {
   margin: 85px auto 20px;
