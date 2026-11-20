@@ -12,7 +12,7 @@ const organizationJsonLd = {
     "@type": "Organization",
     name: "Acyuta Digital Studio",
     url: siteUrl,
-    logo: `${siteUrl}/Logo.png`,
+    logo: `${ siteUrl }/darkLogo.png`,
     email: "acyutadigitalstudio@gmail.com",
     telephone: "+91 93367 27772",
     address: {
@@ -29,7 +29,7 @@ const organizationJsonLd = {
 };
 
 export const metadata: Metadata = {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL( siteUrl ),
     title: {
         default: "Acyuta Digital Studio | Websites & Social Media",
         template: "%s | Acyuta Digital Studio"
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     description: "Acyuta Digital Studio helps businesses grow with strategic website design and development, custom web solutions, and social media services.",
     applicationName: "Acyuta Digital Studio",
     icons: {
-        icon: "/Logo.png",
-        apple: "/Logo.png"
+        icon: "/darkLogo.png",
+        apple: "/darkLogo.png"
     },
     alternates: {
         canonical: "/"

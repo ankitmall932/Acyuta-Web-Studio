@@ -10,6 +10,34 @@ html.dark {
 	color-scheme: dark;
 }
 
+body {
+	background-color: #f8f7f4;
+	background-image:
+		radial-gradient(ellipse at 10% 0%, rgb(251 191 36 / 0.08), transparent 34rem),
+		radial-gradient(ellipse at 95% 18%, rgb(34 211 238 / 0.05), transparent 30rem);
+	background-attachment: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+	background-color: #080d16;
+	background-image:
+		radial-gradient(ellipse at 10% 0%, rgb(251 191 36 / 0.07), transparent 34rem),
+		radial-gradient(ellipse at 95% 18%, rgb(34 211 238 / 0.045), transparent 30rem);
+}
+
+::selection {
+	background: rgb(251 191 36 / 0.35);
+	color: #0f172a;
+}
+
+:focus-visible {
+	outline: 3px solid rgb(217 119 6 / 0.7);
+	outline-offset: 3px;
+}
+
 @keyframes section-reveal {
 	from {
 		opacity: 0;
@@ -34,32 +62,35 @@ html.dark {
 }
 
 .hover-card {
+	border-radius: 1.5rem;
 	transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
 }
 
 .hover-card:hover {
-	transform: translateY(-0.45rem) scale(1.01);
+	transform: translateY(-0.35rem);
 	border-color: rgb(252 211 77 / 0.65);
-	background-color: rgb(255 255 255 / 0.07);
-	box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.25), 0 0 2rem rgb(251 191 36 / 0.08);
+	box-shadow: 0 1.5rem 3rem rgb(15 23 42 / 0.12), 0 0 2rem rgb(251 191 36 / 0.08);
 }
 
 html:not(.dark) .hover-card:hover {
 	border-color: rgb(217 119 6 / 0.4);
-	background-color: rgb(255 255 255 / 0.9);
 	box-shadow: 0 1.25rem 2.5rem rgb(15 23 42 / 0.1), 0 0 1.5rem rgb(251 191 36 / 0.08);
 }
 
 .social-hover-card:hover {
 	border-color: rgb(103 232 249 / 0.65);
-	background-color: rgb(103 232 249 / 0.1);
-	box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.25), 0 0 2rem rgb(34 211 238 / 0.1);
+	box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.12), 0 0 2rem rgb(34 211 238 / 0.1);
 }
 
 html:not(.dark) .social-hover-card:hover {
 	border-color: rgb(8 145 178 / 0.35);
-	background-color: rgb(236 254 255 / 0.9);
 	box-shadow: 0 1.25rem 2.5rem rgb(15 23 42 / 0.1), 0 0 1.5rem rgb(34 211 238 / 0.1);
+}
+
+@media (max-width: 640px) {
+	.hover-card:hover {
+		transform: none;
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
