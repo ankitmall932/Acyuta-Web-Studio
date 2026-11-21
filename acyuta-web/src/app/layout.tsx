@@ -9,12 +9,19 @@ const siteUrl = "https://acyutadigitalstudio.website";
 
 const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": [ "Organization", "ProfessionalService" ],
     name: "Acyuta Digital Studio",
     url: siteUrl,
     logo: `${ siteUrl }/darkLogo.png`,
+    image: `${ siteUrl }/HomeImage.png`,
     email: "acyutadigitalstudio@gmail.com",
     telephone: "+91 93367 27772",
+    founder: {
+        "@type": "Person",
+        name: "Ankit Mall",
+        url: "https://www.ankitmall.co.in"
+    },
+    areaServed: [ "Gorakhpur", "Pipraich", "Kaptanganj", "Maharajganj", "Uttar Pradesh", "India" ],
     address: {
         "@type": "PostalAddress",
         addressLocality: "Gorakhpur",
@@ -31,17 +38,32 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
     metadataBase: new URL( siteUrl ),
     title: {
-        default: "Acyuta Digital Studio | Websites & Social Media",
+        default: "Acyuta Digital Studio | Websites & Social Media Agency in Gorakhpur",
         template: "%s | Acyuta Digital Studio"
     },
     description: "Acyuta Digital Studio helps businesses grow with strategic website design and development, custom web solutions, and social media services.",
+    keywords: [
+        "Acyuta Digital Studio",
+        "Best Web Design Agency in Gorakhpur",
+        "Website Development Company in Gorakhpur",
+        "Social Media Marketing Agency Gorakhpur",
+        "Digital Marketing Agency in Gorakhpur",
+        "Web Designer in Pipraich Gorakhpur",
+        "Affordable Business Website Design India",
+        "Website Maintenance Services Gorakhpur",
+        "Social Media Handling Agency India",
+        "SEO Services in Gorakhpur",
+        "Custom Next.js & React Website Development",
+        "E-commerce Website Developer Gorakhpur",
+        "Local Business Website Design Uttar Pradesh",
+    ],
+    authors: [ { name: "Ankit Mall", url: "https://www.ankitmall.co.in" } ],
+    creator: "Acyuta Digital Studio",
+    alternates: { canonical: "/" },
     applicationName: "Acyuta Digital Studio",
     icons: {
-        icon: "/darkLogo.png",
-        apple: "/darkLogo.png"
-    },
-    alternates: {
-        canonical: "/"
+        icon: "/favicon.png",
+        apple: "/favicon.png"
     },
     robots: {
         index: true,
@@ -59,7 +81,7 @@ export const metadata: Metadata = {
         locale: "en_IN",
         siteName: "Acyuta Digital Studio",
         title: "Acyuta Digital Studio | Websites & Social Media",
-        description: "Strategic websites, custom web solutions, and social media services to help your business grow.",
+        description: "Acyuta Digital Studio helps businesses in Gorakhpur, Uttar Pradesh & across India grow with strategic website design, custom web development, and social media services.",
         url: "/",
         images: [
             {
